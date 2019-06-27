@@ -14,19 +14,12 @@ export default class Posts extends Component {
      //Реакт создай ссылку  к которой я могу обратиться
      this.myRefName = React.createRef();
      this.myRefComment = React.createRef();
-     //console.log(this.myRefComment.current.value, this.myRefName.current.value);
-      
-   
-
+     
     this.onPostChange = this.onPostChange.bind(this);
     this.newPost = this.newPost.bind(this);
   }
   
   newPost() {
-    // const title = myRefName;
-    // const userId = 1;
-    // const body = myRefComment;
-    // addPost(title, userId, body);
     const title = this.myRefName.current.value;
     const userId = 1;
     const body = this.myRefComment.current.value;
@@ -34,7 +27,6 @@ export default class Posts extends Component {
     let newComment = {  title, userId, body};
     const posts = [newComment, ...this.state.posts ];
     console.log(posts);
-
 
     //очистка введенных полей 
     this.myRefName.current.value = '';

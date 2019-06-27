@@ -20,10 +20,13 @@ class PostStore extends EventEmitter {
     this.change();
   }
 
+
   addPost(post) {
-    this.posts = [post, ...this.posts]
-    this.change();
-  }
+    if (post.lenght) {
+      this.posts = [post, ...this.posts];
+      this.change();
+    }
+  } 
 
   handleActions(action) {
     switch (action.type) {

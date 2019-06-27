@@ -10,7 +10,6 @@ export default class PostItem extends Component {
         <div className="card-body text-secondary">
           <div>{this.props.body}</div>
         </div>
-        
       </div>
     )
   }

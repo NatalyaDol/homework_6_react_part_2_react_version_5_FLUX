@@ -14,11 +14,9 @@ export default class PostsList extends Component {
 
     return (
       <>
-        
         <div>
           {posts}
         </div>
-        
       </>
     )
   }
