@@ -31,9 +31,11 @@ class PostStore extends EventEmitter {
   handleActions(action) {
     switch (action.type) {
       case 'GET_POSTS':
-        this.getPosts(action.data)
+        this.getPosts(action.data);
+        break;
       case 'ADD_POST':
         this.addPost(action.data);
+        break;
     }
   }
 }
